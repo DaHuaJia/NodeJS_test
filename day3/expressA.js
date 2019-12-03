@@ -25,6 +25,12 @@ app.get("/admin", function(req, res){
 	res.send("<h1>hello admin. wait for you change world.</h1>");
 });
 
+// 对页面 abcd, abxcd, ab123cd, 等响应 GET 请求
+app.get('/ab*cd', function(req, res) {   
+   console.log("/ab*cd GET 请求");
+   res.send('正则匹配');
+})
+
 
 var server = app.listen(1234, function(){
 	var host = server.address().address;
