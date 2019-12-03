@@ -1,5 +1,6 @@
 var http = require("http");
 
+// 每有一个请求，以下方法就会主动执行一次
 http.createServer(function(request, response){
 	// 发送 HTTP 请求头
 	// HTTP 状态值：200（OK）
